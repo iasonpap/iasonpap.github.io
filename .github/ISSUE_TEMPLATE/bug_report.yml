@@ -9,7 +9,7 @@ body:
       label: Description
       description: Briefly describe the bug.
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: steps
@@ -21,7 +21,7 @@ body:
         2. Step 2  
         3. Step 3  
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: expected
@@ -29,7 +29,7 @@ body:
       label: Expected Behavior
       description: What should happen?
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: actual
@@ -37,7 +37,7 @@ body:
       label: Actual Behavior
       description: What actually happened?
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: additional

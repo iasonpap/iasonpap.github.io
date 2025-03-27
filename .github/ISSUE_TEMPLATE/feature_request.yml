@@ -17,7 +17,7 @@ body:
       label: Problem
       description: What problem does this solve?
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: solution
@@ -25,7 +25,7 @@ body:
       label: Solution
       description: How should it work?
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: alternatives
