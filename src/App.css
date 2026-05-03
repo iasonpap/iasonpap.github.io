@@ -13,12 +13,30 @@
   margin-bottom: 2rem;
 }
 
-.site-kicker {
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   margin: 0;
   font-size: 0.95rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
+}
+
+.site-logo-icon {
+  width: 1.5rem;
+  height: 1rem;
+  color: var(--accent-strong);
+  flex: 0 0 auto;
+}
+
+.site-logo-icon path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .site-nav {
