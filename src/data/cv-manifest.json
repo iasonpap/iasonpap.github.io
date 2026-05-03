@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-05-03T21:48:40.944Z",
+  "sourceDir": "src/assets/CVs",
+  "filenamePattern": "YYYY-MM-Iasonas_CV_<language>.pdf",
+  "defaultLanguage": "english",
+  "languages": [
+    {
+      "code": "english",
+      "label": "english"
+    },
+    {
+      "code": "greek",
+      "label": "greek (not available)"
+    }
+  ],
+  "currentByLanguage": {
+    "english": "2025-04-Iasonas_CV_english.pdf",
+    "greek": null
+  },
+  "archiveByLanguage": {
+    "english": [
+      "2025-04-Iasonas_CV_english.pdf",
+      "2025-01-Iasonas_CV_english.pdf"
+    ],
+    "greek": []
+  }
+}
