@@ -32,6 +32,20 @@ const languageLabels = {
 	greek: 'greek (not available)',
 }
 
+function validateLanguageConfig() {
+	const missingLabels = allowedLanguages.filter((language) => !(language in languageLabels))
+	if (missingLabels.length > 0) {
+		throw new Error(`Missing languageLabels for: ${missingLabels.join(', ')}`)
+	}
+
+	const extraLabels = Object.keys(languageLabels).filter(
+		(language) => !allowedLanguages.includes(language),
+	)
+	if (extraLabels.length > 0) {
+		throw new Error(`languageLabels contains unsupported languages: ${extraLabels.join(', ')}`)
+	}
+}
+
 const filenameRegex = /^(\d{4})-(0[1-9]|1[0-2])-Iasonas_CV_([a-z]+)\.pdf$/
 
 function compareCvEntriesDesc(left, right) {
@@ -43,6 +57,8 @@ function compareCvEntriesDesc(left, right) {
 }
 
 async function generateManifest() {
+	validateLanguageConfig()
+
 	let files = []
 
 	try {
