@@ -8,7 +8,17 @@ function App() {
   return (
     <div className="site-shell">
       <header className="site-header">
-        <p className="site-kicker">Iasonas Papadopoulos</p>
+        <p className="site-logo">
+          <svg
+            className="site-logo-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M1 12C3.5 4 6.5 4 9 12S14.5 20 17 12 20.5 4 23 12" />
+          </svg>
+          <span>Iasonas Papadopoulos</span>
+        </p>
         <nav className="site-nav" aria-label="Main navigation">
           <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : '')}>
             About
