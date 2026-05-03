@@ -19,7 +19,6 @@ npm run build   # generates manifest then builds to dist/
 ```
 
 CI deploys automatically on push to `main` via `.github/workflows/deploy-pages.yml`.
-The `gh-pages` npm script in `package.json` is a leftover — use CI instead.
 
 ## Adding a CV
 
