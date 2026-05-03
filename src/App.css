@@ -103,3 +103,74 @@
 .project-card p {
   margin: 0;
 }
+
+.cv-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.cv-controls {
+  display: grid;
+  gap: 0.35rem;
+  max-width: 320px;
+}
+
+.cv-controls label {
+  font-weight: 600;
+}
+
+.cv-controls select {
+  border: 1px solid rgba(13, 87, 158, 0.28);
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem;
+  background: rgba(255, 255, 255, 0.9);
+  font: inherit;
+}
+
+.cv-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.cv-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.cv-download-link {
+  text-decoration: none;
+  color: white;
+  background: var(--accent-strong);
+  padding: 0.55rem 0.75rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.cv-download-link:hover {
+  filter: brightness(0.95);
+}
+
+.cv-filename {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.cv-frame {
+  width: 100%;
+  min-height: 70vh;
+  border: 1px solid rgba(13, 87, 158, 0.2);
+  border-radius: 12px;
+  background: white;
+}
+
+.cv-archive h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.cv-archive ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
