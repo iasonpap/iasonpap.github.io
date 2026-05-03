@@ -1,37 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { NavLink, Navigate, Route, Routes } from 'react-router-dom'
+import About from './pages/About.jsx'
+import CV from './pages/CV.jsx'
+import Projects from './pages/Projects.jsx'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1> My Personal Portfolio</h1>
-      <h2> Under construction</h2>
+    <div className="site-shell">
+      <header className="site-header">
+        <p className="site-kicker">Iasonas Papadopoulos</p>
+        <nav className="site-nav" aria-label="Main navigation">
+          <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : '')}>
+            About
+          </NavLink>
+          <NavLink to="/cv" className={({ isActive }) => (isActive ? 'active' : '')}>
+            CV
+          </NavLink>
+          <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>
+            Projects
+          </NavLink>
+        </nav>
+      </header>
 
-      <h1>Iasonas Papadopoulos</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <main>
+        <Routes>
+          <Route path="/" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/cv" element={<CV />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </main>
+    </div>
   )
 }
 
