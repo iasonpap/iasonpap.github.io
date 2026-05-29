@@ -1,7 +1,10 @@
 import { NavLink, Navigate, Route, Routes } from 'react-router-dom'
-import About from './pages/About.jsx'
-import CV from './pages/CV.jsx'
-import Projects from './pages/Projects.jsx'
+import About from './views/About.jsx'
+import CV from './views/CV.jsx'
+import Projects from './views/Projects.jsx'
+import Project from './views/Project.jsx'
+import Blog from './views/Blog.jsx'
+import Article from './views/Article.jsx'
 import './App.css'
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
           <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>
             Projects
           </NavLink>
+          <NavLink to="/blog" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Blog
+          </NavLink>
         </nav>
       </header>
 
@@ -37,7 +43,10 @@ function App() {
           <Route path="/" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/cv" element={<CV />} />
+          <Route path="/projects/:slug" element={<Project />} />
           <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<Article />} />
         </Routes>
       </main>
     </div>
