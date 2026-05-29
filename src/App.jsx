@@ -2,6 +2,7 @@ import { NavLink, Navigate, Route, Routes } from 'react-router-dom'
 import About from './pages/About.jsx'
 import CV from './pages/CV.jsx'
 import Projects from './pages/Projects.jsx'
+import Project from './pages/Project.jsx'
 import Blog from './pages/Blog.jsx'
 import Article from './pages/Article.jsx'
 import './App.css'
@@ -42,6 +43,7 @@ function App() {
           <Route path="/" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/cv" element={<CV />} />
+          <Route path="/projects/:slug" element={<Project />} />
           <Route path="*" element={<Navigate to="/" replace />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<Article />} />
