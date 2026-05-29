@@ -19,6 +19,7 @@ function CV() {
 
   const selectedFilename = cvManifest.currentByLanguage?.[selectedLanguage] ?? null
   const selectedUrl = selectedFilename ? cvAssetUrlByFilename.get(selectedFilename) ?? null : null
+  const selectedLanguageLabel = languages.find((lang) => lang.code === selectedLanguage)?.label ?? selectedLanguage
 
   const archiveItems = useMemo(() => {
     const files = cvManifest.archiveByLanguage?.[selectedLanguage] ?? []
@@ -57,7 +58,7 @@ function CV() {
         <div className="cv-content">
           <div className="cv-actions">
             <a href={selectedUrl} target="_blank" rel="noreferrer" className="cv-download-link">
-              Download current CV ({selectedLanguage})
+              Download current CV ({selectedLanguageLabel})
             </a>
             <span className="cv-filename">Current file: {selectedFilename}</span>
           </div>

@@ -28,8 +28,8 @@ const manifestPath = path.join(manifestDir, 'cv-manifest.json')
 
 const allowedLanguages = ['english', 'greek']
 const languageLabels = {
-	english: 'english',
-	greek: 'greek (not available)',
+	english: 'English',
+	greek: 'Greek (not available)',
 }
 
 function validateLanguageConfig() {
@@ -46,7 +46,7 @@ function validateLanguageConfig() {
 	}
 }
 
-const filenameRegex = /^(\d{4})-(0[1-9]|1[0-2])-Iasonas_CV_([a-z]+)\.pdf$/
+const filenameRegex = /^(\d{4})-(0[1-9]|1[0-2])-Iasonas_CV_([a-z]+)\.pdf$/i
 
 function compareCvEntriesDesc(left, right) {
 	if (left.versionKey !== right.versionKey) {
@@ -63,7 +63,9 @@ async function generateManifest() {
 
 	try {
 		files = await readdir(cvDir)
-	} catch {
+	} catch (error) {
+		console.warn(`Warning: Could not read CV directory at ${cvDir}. Continuing with empty file list.`)
+		console.warn(`Error details: ${error.message}`)
 		files = []
 	}
 
