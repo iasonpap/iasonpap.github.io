@@ -1,5 +1,5 @@
 import ArticleCard from '../components/ArticleCard'
-import { fetchArticles } from '../viewmodels/blogViewModel'
+import { fetchArticles } from '../models/articles'
 
 function Blog() {
   const articles = fetchArticles()

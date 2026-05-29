@@ -25,3 +25,19 @@ export function getAllArticles() {
 export function getArticleBySlug(slug) {
   return articles.find((a) => a.slug === slug)
 }
+
+// Convenience fetch functions (previously in viewmodel)
+export function fetchArticles() {
+  return getAllArticles()
+}
+
+export function fetchArticle(slug) {
+  return getArticleBySlug(slug)
+}
+
+export default {
+  getAllArticles,
+  getArticleBySlug,
+  fetchArticles,
+  fetchArticle,
+}

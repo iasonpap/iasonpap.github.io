@@ -1,4 +1,4 @@
-import { fetchProjects } from '../viewmodels/projectsViewModel'
+import { fetchProjects } from '../models/projects'
 import ProjectCard from '../components/ProjectCard'
 
 function Projects() {

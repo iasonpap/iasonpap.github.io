@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import { fetchProject } from '../viewmodels/projectsViewModel'
+import { fetchProject } from '../models/projects'
 
 function Project() {
   const { slug } = useParams()

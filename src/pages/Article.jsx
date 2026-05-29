@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import { fetchArticle } from '../viewmodels/blogViewModel'
+import { fetchArticle } from '../models/articles'
 
 function Article() {
   const { slug } = useParams()
