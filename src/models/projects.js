@@ -28,13 +28,3 @@ export default {
   getAllProjects,
   getProjectBySlug,
 }
-
-// Convenience fetch wrappers (moved from viewmodel)
-export function fetchProjects() {
-  return getAllProjects()
-}
-
-export function fetchProject(slug) {
-  return getProjectBySlug(slug)
-}
-
