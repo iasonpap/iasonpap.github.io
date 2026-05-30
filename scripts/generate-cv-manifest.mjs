@@ -72,7 +72,7 @@ async function generateManifest() {
 	const grouped = Object.fromEntries(allowedLanguages.map((language) => [language, []]))
 
 	for (const filename of files) {
-		const match = filename.match(filenameRegex)
+		const match = filename.toLowerCase().match(filenameRegex)
 		if (!match) {
 			continue
 		}
